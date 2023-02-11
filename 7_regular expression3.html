@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/* 
+		반복검색
+        {m} : m 번 반복
+        {m,n} : 최소 m번 최대 n번 반복
+        + : 최소 한 번 이상 반복
+        ? : 최대 한 번 이상 반복
+
+        \d : 숫자
+        \D : 숫자가 아닌 문자
+        \w : 알파벳, 숫자, 언더스코어(_)
+        \W : 알파벳, 숫자, 언더스코어가 아닌 문자
+        \s : 공백(띄어쓰기, 탭, 줄바꿈)
+        \S : 공백이 아닌 문자
+    */
+
+	var pattern = /(\w+)\s(\w+)/;
+	var str = "coding everybody";
+	var result = str.replace(pattern, "$2, $1");
+	console.log(result); //everybody, coding 리턴
+
+	//치환
+	var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+	var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+	var result = content.replace(urlPattern, function(url){
+    return '<a href="'+url+'">'+url+'</a>'; //<a></a>태그가 감싸게 됨
+
+});
+console.log(result);
+</script>
+</body>
+</html>

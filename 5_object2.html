@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<ul>
+	<li>egoing</li>
+	<li>graphiite</li>
+	<li>leezcche</li>
+</ul>
+
+<script type="text/javascript">
+	//원래 알던 배열 반복작업
+	var arr = ['a','b','c'];
+	for(var i = 0; i < arr.length; i++) {
+		document.write(arr[i] +"<br/>"); //i 인덱스에 해당하는 값 출력
+	}
+
+	//객체 데이터 반복 (꺼내오기) 방법 (for ~ in문)=>객체에서도 사용 가능
+	var grades = {'egoing':10,'k8805':6,'sorialgi':80};
+	for(key in grades) { //key in 객체명 
+		document.write( "<li>key : "+key+" / value : "+grades[key]+"</li>");
+		//객체명[key] = value
+	}
+</script>
+</body>
+</html>

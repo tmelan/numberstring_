@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	<ul id="list">
+		<li>empty</li>
+		<li>empty</li>
+		<li>empty</li>
+		<li>empty</li>
+	</ul>
+<input type="button" value="execute" id="execute_btn">
+
+<script type="text/javascript">
+
+/* 라이브러리
+모듈과 비슷, 자주 사용되는 로직을 재사용하기 편리하도록 잘 정리한 일련의 코드들의 집합을 의미한다. (오픈소스, jQuery)
+jQuery $로 시작
+*/
+	//버튼 눌렀을때 실행되게 하기
+	$('#execute_btn').click(function(){
+		$('#list li').text('coding'); 
+		//id가 list인 하위태그 li가져오기 empty의 text가 coding으로 변경됨
+	});
+
+/* jQuery 를 사용하여 위의 작업이 가능했음
+이를 통해 라이브러리가 얼마나 쓸모있는지 알 수 있음
+*/
+	
+</script>
+</body>
+</html>

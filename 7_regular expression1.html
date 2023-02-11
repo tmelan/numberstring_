@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	문자열에서 특정한 문자를 찾아내는 도구, 수십줄이 필요한 작업을 한 줄로 끝낼 수 있다 
+	ex) 긴 문자열 중에 원하는 정보만을 추출/테스트(검색)/치환 하고 싶을 때 정규표현식 사용 방법 : new RegExp(패턴) , /패턴/
+	*/
+
+	//패턴만들기 1. 정규표현식 리터럴 /패턴/
+	var pattern = /a/; //문자열 a 찾기 
+
+	//2. 정규표현식 객체 생성자 new RegExp(패턴)
+	var pattern = new RegExp('a');
+
+	/* 정규표현식 메소드 (정규표현식을 컴파일해서 객체를 만들었다면 문자열에서 원하는 문자를 찾아내는것)
+	exec : 패턴을 만족하는 값이 있으면 처음 매치된 문자열 리턴 (추출)
+	test : 패턴을 만족하는 값이 있으면 true, 없으면 false (존재유무 테스트)
+	*/
+	console.log(pattern.exec('abcedf')); //문자열 ["a"] 배열로 리턴
+	console.log(pattern.exec('bcdefg')); //a가 없으니까 null 리턴
+
+	console.log(pattern.test('abcedf'));//true 리턴
+
+	/* string 객체의 메소드 (정규표현식 사용 가능)
+	match : 패턴값과 일치하는 값을 리턴
+	replace : 패턴값과 일치하는 값을 대체값으로 대체
+	*/
+
+	var pattern = /a/;
+	var str = 'abcedf';
+	str.match(pattern); //["a"] 리턴
+	str.replace(pattern, 'A'); //"Abcedf" 리턴
+
+
+</script>
+</body>
+</html>

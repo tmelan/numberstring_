@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//객체 {'key':value}
+	//객체 생성 방법1 : 생성 후 변수에 대입
+	var grades = {'egoing':10,'k8805':6,'sorialgi':80}; 
+
+	//객체 생성 방법2
+	var grades = {}; //비어있는 객체를 만들고
+	grades['egoing'] = 10; //값 생성
+	grades['k8805'] = 6;
+	grades['sorialgi'] = 80;
+
+	//객체 생성 방법3 new Object();
+	var grades = new Object(); 
+	grades['egoing'] = 10; //값 생성
+	grades['k8805'] = 6;
+	grades['sorialgi'] = 80;
+
+	//객체 값 가져오기
+	var grades = {'egoing':10,'k8805':6,'sorialgi':80};
+	alert(grades['sorialgi']); //80출력, grades.sorialgi 도 가능
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//배열 관련 함수들
+	//추가
+	var li = ["a","b","c","d","e"];
+	li.push("f"); //push(); 값 추가 
+	alert(li);
+
+	var li = ["a","b","c","d","e"];
+	li = li.concat(["f","g"]); //concat(); 복수의 값 추가
+	alert(li); 
+
+	var li = ["a","b","c","d","e"];
+	li.unshift("z"); //unshift(); 맨 앞에 값 추가
+	alert(li); 
+
+	var li = ["a","b","c","d","e"];
+	li.splice(2, 0, "B"); //splice(index, howmany, element1...); index부터 howmany의 해당 값만큼 제거한 후 (0이라면 삭제하는 값 없음) element1을 index 해당 값에 추가
+	alert(li); 
+
+</script>
+</body>
+</html>

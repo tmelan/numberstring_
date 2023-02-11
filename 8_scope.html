@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	var vscope = 'global';
+	function fscope(){
+		var vscope = 'local';
+		var lv = 'local variables'	
+		alert(lv); //lv값 리턴
+		alert(vscope); 
+	} //함수 안에서 함수 밖의 vscope에 접근할수 있어 global(전역변수)을 리턴한다 그렇지 않고 함수 안에 선언돼있으면 local(지역변수)을 리턴한다 
+
+	fscope();
+	fscope2();
+	// 둘 다 fscope함수의 전역변수인 vscope의 global을 호출한다 
+	alert(lv);//undefined 지역변수기 때문에 함수밖에서 호출x
+
+</script>
+
+</body>
+</html>

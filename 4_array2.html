@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function get_members(){
+		return ['egoing','k8805','sorialgi'];
+	}
+	members = get_members(); //배열 데이터 함수를 변수에 담음
+
+	for(var i=0; i<members.length; i++){
+		document.write(members[i].toUpperCase()+"<br/>");
+	} //밑의 코드를 반복문으로 length로 표현하면 원소갯수가 변해도 가변적으로 적용
+
+	// document.write(members[0].toUpperCase()+"<br/>"); toUpperCase다 대문자로
+	// document.write(members[1].toUpperCase()+"<br/>");
+	// document.write(members[2].toUpperCase()+"<br/>");
+
+	alert(members.length);//배열의 값이 몇 개인가 
+
+</script>
+</body>
+</html>

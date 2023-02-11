@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var grades = {
+		'list':{
+			'egoing':10,
+			'k8805':6,
+			'sorialgi':80},
+		'show': //객체 안에 함수 담을 수도 있음
+			function(){
+				for(var name in this.list) {
+					document.write(name+' : '+this.list[name]+"<br/>");
+				}
+			}
+		}; 
+	grades.show(); //객체 grades 의 함수 호출
+</script>
+</body>
+</html>
